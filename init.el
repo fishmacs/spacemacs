@@ -9,8 +9,7 @@
 ;;
 ;;; License: GPLv3
 
-;; Without this comment emacs25 adds (package-initialize) here
-;; (package-initialize)
+;; Wit)
 
 (setq gc-cons-threshold 100000000)
 (defconst spacemacs-version         "0.105.14" "Spacemacs version.")

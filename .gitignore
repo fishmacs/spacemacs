@@ -40,6 +40,7 @@ server/
 *.pyc
 /*.zip
 *.db
+*.html
 python-*-docs-html
 /.cask/
 

@@ -13,7 +13,7 @@ values."
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path (list (concat user-emacs-directory "private"))
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -43,7 +43,7 @@ values."
      c-c++
      html
      shell-scripts
-     evernote
+     evernote-mode
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
@@ -273,6 +273,7 @@ layers configuration. You are free to put any user code."
   (load "init-web")
   (load "init-markdown")
   (load "key-bind")
+  (add-hook 'eww-mode-hook (lambda () (rename-buffer "eww" t)))
  )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
